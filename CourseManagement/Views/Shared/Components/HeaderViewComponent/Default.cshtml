@@ -1,0 +1,14 @@
+﻿@model CourseManagement.ViewComponents.HeaderVM
+
+<div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        
+@*         <p>Items in basket: @Model.BasketCount</p>
+        <p>Total price: @Model.BasketTotalPrice</p>
+ *@    }
+@*     else
+    {
+        <p>Please log in to see your basket.</p>
+    } *@
+</div>

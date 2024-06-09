@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CourseManagement.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<section>
+    <div class="mt-5">
+        <h1>Categories</h1>
+
+        @if (User.IsInRole("SuperAdmin"))
+        {
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New Category</a>
+            </p>
+        }
+    </div>
+    <div class="mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>
+                            <img src="@item.Image" alt="Image" style="width:200px;height:200px;" />
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+
