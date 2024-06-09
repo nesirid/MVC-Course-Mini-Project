@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CourseManagement.Models.Category>
+﻿@model IEnumerable<CourseManagement.ViewModels.CategoryVM>
 
 @{
     ViewData["Title"] = "Categories";
@@ -22,7 +22,8 @@
                     <th>Name</th>
                     <th>Description</th>
                     <th>Image</th>
-                    <th></th>
+                    <th>Course Count</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +33,12 @@
                         <td>@item.Name</td>
                         <td>@item.Description</td>
                         <td>
-                            <img src="@item.Image" alt="Image" style="width:200px;height:200px;" />
+                            @if (!string.IsNullOrEmpty(item.ImagePath))
+                            {
+                                <img src="@item.ImagePath" alt="Image" style="width:200px;height:200px;" />
+                            }
                         </td>
+                        <td>@item.CourseCount</td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
                             <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
@@ -45,7 +50,4 @@
             </tbody>
         </table>
     </div>
-
 </section>
-
-

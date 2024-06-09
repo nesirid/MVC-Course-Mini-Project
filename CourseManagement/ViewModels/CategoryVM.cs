@@ -8,6 +8,7 @@ namespace CourseManagement.ViewModels
         public string Name { get; set; }
         public string Description { get; set; }
         public IFormFile ImageFile { get; set; }
-
+        public string? ImagePath { get; set; }
+        public int CourseCount { get; internal set; }
     }
 }

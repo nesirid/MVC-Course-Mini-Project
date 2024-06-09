@@ -144,25 +144,14 @@ namespace CourseManagement.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            Console.WriteLine($"Attempting to delete course with ID {id}");
             var course = await _courseService.GetCourseByIdAsync(id);
             if (course == null)
             {
-                Console.WriteLine($"Course with ID {id} not found");
                 return NotFound();
             }
 
             await _courseService.DeleteCourseAsync(id);
-
-            Console.WriteLine($"Course with ID {id} was deleted.");
             return RedirectToAction(nameof(Index));
         }
-
-
-
-
-
-
-
     }
 }

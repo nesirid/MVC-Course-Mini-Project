@@ -2,7 +2,6 @@ using CourseManagement.Data;
 using CourseManagement.Models;
 using CourseManagement.Services;
 using CourseManagement.Services.Interfaces;
-using CourseManagement.ViewComponents;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

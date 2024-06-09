@@ -23,16 +23,13 @@ namespace CourseManagement.Services
 
         public async Task AddCourseAsync(Course course)
         {
-            try
+            _context.Courses.Add(course);
+            var category = await _context.Categories.Include(c => c.Courses).FirstOrDefaultAsync(c => c.Id == course.CategoryId);
+            if (category != null)
             {
-                _context.Courses.Add(course);
-                await _context.SaveChangesAsync();
-                Console.WriteLine($"Course {course.Title} saved to the database successfully.");
+                category.Courses.Add(course);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving course to the database: {ex.Message}");
-            }
+            await _context.SaveChangesAsync();
         }
 
 
@@ -53,13 +50,12 @@ namespace CourseManagement.Services
             if (course != null)
             {
                 _context.Courses.Remove(course);
+                var category = await _context.Categories.Include(c => c.Courses).FirstOrDefaultAsync(c => c.Id == course.CategoryId);
+                if (category != null)
+                {
+                    category.Courses.Remove(course);
+                }
                 await _context.SaveChangesAsync();
-
-                Console.WriteLine($"Course with ID {id} was deleted from the database successfully.");
-            }
-            else
-            {
-                Console.WriteLine($"Course with ID {id} not found in the database.");
             }
         }
     }

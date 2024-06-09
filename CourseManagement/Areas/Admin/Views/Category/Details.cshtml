@@ -1,0 +1,26 @@
+﻿@model CourseManagement.Models.Category
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+
+<div>
+    <h4>Description</h4>
+    <p>@Model.Description</p>
+</div>
+
+<div>
+    <h4>Courses</h4>
+    <ul>
+        @foreach (var course in Model.Courses)
+        {
+            <li>@course.Title</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

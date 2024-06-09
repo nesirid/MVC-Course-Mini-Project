@@ -21,7 +21,25 @@ namespace CourseManagement.ViewComponents
             _userManager = userManager;
         }
 
-        
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            AppUser user = new();
+
+            if (User.Identity.Name != null)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+
+            Dictionary<string, string> settings = await _settingService.GetAllAsync();
+
+            HeaderVM response = new()
+            {
+                Settings = settings,
+                UserFullName = user.FullName
+            };
+
+            return View(response);
+        }
     }
 
     public class HeaderVM

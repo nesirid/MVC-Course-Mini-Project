@@ -21,7 +21,15 @@ namespace CourseManagement.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var categories = await _categoryService.GetAllCategoriesAsync();
-            return View(categories);
+            var categoryVMs = categories.Select(c => new CategoryVM
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Description = c.Description,
+                ImagePath = c.Image,
+                CourseCount = c.Courses.Count
+            }).ToList();
+            return View(categoryVMs);
         }
 
         public IActionResult Create()
@@ -76,6 +84,7 @@ namespace CourseManagement.Areas.Admin.Controllers
                 Id = category.Id,
                 Name = category.Name,
                 Description = category.Description,
+                ImagePath = category.Image
             };
 
             return View(categoryVM);

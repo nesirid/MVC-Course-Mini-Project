@@ -759,3 +759,5 @@ C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseMa
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.pdb
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.genruntimeconfig.cache
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\ref\CourseManagement.dll
+C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
+C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
