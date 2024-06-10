@@ -6,11 +6,11 @@ using CourseManagement.ViewModels;
 namespace CourseManagement.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class InstructorsController : Controller
+    public class InstructorController : Controller
     {
         private readonly IInstructorService _instructorService;
 
-        public InstructorsController(IInstructorService instructorService)
+        public InstructorController(IInstructorService instructorService)
         {
             _instructorService = instructorService;
         }

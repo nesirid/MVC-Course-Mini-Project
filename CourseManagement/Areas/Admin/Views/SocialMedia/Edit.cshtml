@@ -1,19 +1,19 @@
 ﻿@model CourseManagement.ViewModels.SocialMediaVM
 
 @{
-    ViewData["Title"] = "Create Social Media";
+    ViewData["Title"] = ViewData["Action"] == "Create" ? "Create Social Media" : "Edit Social Media";
 }
-<section>
 
+<section>
     <div class="mt-5">
-        <h1>Create Social Media</h1>
+        <h1>@ViewData["Title"]</h1>
         <div>
             <a class="btn btn-primary" asp-action="Index">Back to List</a>
         </div>
     </div>
     <div class="col">
         <div>
-            <form asp-action="Create" enctype="multipart/form-data">
+            <form asp-action="@ViewData["Action"]" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" class="form-control" />
@@ -25,14 +25,9 @@
                     <span asp-validation-for="IconFile" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="submit" value="Save" class="btn btn-primary" />
                 </div>
             </form>
         </div>
     </div>
-</div>
-
-
 </section>
-
-

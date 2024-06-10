@@ -50,36 +50,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructors/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvcnNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructor/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructors/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvcnNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructor/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructors/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvcnNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructors/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvcnNcSW5kZXguY3NodG1s
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedias/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFzXENyZWF0ZS5jc2h0bWw=
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedias/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFzXEVkaXQuY3NodG1s
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedia/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedias/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFzXEluZGV4LmNzaHRtbA==
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/SocialMedia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/User/Create.cshtml]

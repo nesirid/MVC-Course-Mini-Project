@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CourseManagement.Models;
+﻿using CourseManagement.Models;
 using CourseManagement.Services.Interfaces;
 using CourseManagement.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CourseManagement.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class SocialMediasController : Controller
+    public class SocialMediaController : Controller
     {
         private readonly ISocialMediaService _socialMediaService;
 
-        public SocialMediasController(ISocialMediaService socialMediaService)
+        public SocialMediaController(ISocialMediaService socialMediaService)
         {
             _socialMediaService = socialMediaService;
         }
@@ -22,13 +22,14 @@ namespace CourseManagement.Areas.Admin.Controllers
             {
                 Id = sm.Id,
                 Name = sm.Name,
-                Icon = sm.Icon
+                IconUrl = sm.Icon
             }).ToList();
             return View(socialMediaVMs);
         }
 
         public IActionResult Create()
         {
+            ViewData["Action"] = "Create";
             return View();
         }
 
@@ -42,14 +43,8 @@ namespace CourseManagement.Areas.Admin.Controllers
 
                 if (socialMediaVM.IconFile != null)
                 {
-                    var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/icons");
-                    if (!Directory.Exists(uploadsDir))
-                    {
-                        Directory.CreateDirectory(uploadsDir);
-                    }
-
                     var fileName = Path.GetFileName(socialMediaVM.IconFile.FileName);
-                    var filePath = Path.Combine(uploadsDir, fileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/icons", fileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
@@ -68,6 +63,8 @@ namespace CourseManagement.Areas.Admin.Controllers
                 await _socialMediaService.AddAsync(socialMedia);
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewData["Action"] = "Create";
             return View(socialMediaVM);
         }
 
@@ -83,9 +80,10 @@ namespace CourseManagement.Areas.Admin.Controllers
             {
                 Id = socialMedia.Id,
                 Name = socialMedia.Name,
-                Icon = socialMedia.Icon
+                IconUrl = socialMedia.Icon
             };
 
+            ViewData["Action"] = "Edit";
             return View(socialMediaVM);
         }
 
@@ -106,41 +104,41 @@ namespace CourseManagement.Areas.Admin.Controllers
                     return NotFound();
                 }
 
-                string iconUrl = socialMedia.Icon;
+                socialMedia.Name = socialMediaVM.Name;
 
                 if (socialMediaVM.IconFile != null)
                 {
-                    var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/icons");
-                    if (!Directory.Exists(uploadsDir))
-                    {
-                        Directory.CreateDirectory(uploadsDir);
-                    }
-
                     var fileName = Path.GetFileName(socialMediaVM.IconFile.FileName);
-                    var filePath = Path.Combine(uploadsDir, fileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/assets/icons", fileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await socialMediaVM.IconFile.CopyToAsync(stream);
                     }
 
-                    iconUrl = $"/assets/icons/{fileName}";
+                    socialMedia.Icon = $"/assets/icons/{fileName}";
                 }
-
-                socialMedia.Name = socialMediaVM.Name;
-                socialMedia.Icon = iconUrl;
 
                 await _socialMediaService.UpdateAsync(socialMedia);
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewData["Action"] = "Edit";
             return View(socialMediaVM);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            var socialMedia = await _socialMediaService.GetByIdAsync(id);
+            if (socialMedia == null)
+            {
+                return NotFound();
+            }
+
             await _socialMediaService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
-
     }
 }

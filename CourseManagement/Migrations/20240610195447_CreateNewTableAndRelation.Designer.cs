@@ -4,6 +4,7 @@ using CourseManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CourseManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610195447_CreateNewTableAndRelation")]
+    partial class CreateNewTableAndRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,15 +186,6 @@ namespace CourseManagement.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhotoUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia3")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -427,7 +420,7 @@ namespace CourseManagement.Migrations
             modelBuilder.Entity("CourseManagement.Models.InstructorSocialMedia", b =>
                 {
                     b.HasOne("CourseManagement.Models.Instructor", "Instructor")
-                        .WithMany()
+                        .WithMany("InstructorSocialMedias")
                         .HasForeignKey("InstructorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -506,6 +499,8 @@ namespace CourseManagement.Migrations
             modelBuilder.Entity("CourseManagement.Models.Instructor", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("InstructorSocialMedias");
                 });
 
             modelBuilder.Entity("CourseManagement.Models.SocialMedia", b =>

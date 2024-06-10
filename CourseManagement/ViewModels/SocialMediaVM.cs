@@ -7,7 +7,7 @@ namespace CourseManagement.ViewModels
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string? Icon { get; set; }
+        public string? IconUrl { get; set; }
         [Display(Name = "Icon")]
         public IFormFile? IconFile { get; set; }
     }

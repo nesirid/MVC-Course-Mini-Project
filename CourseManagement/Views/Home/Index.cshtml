@@ -1,6 +1,5 @@
 ﻿@model CourseManagement.ViewModels.HomeVM
 
-
 <!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
@@ -291,78 +290,41 @@
             <h1 class="mb-5">Expert Instructors</h1>
         </div>
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="~/assets/img/team-1.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+            @if (Model.Instructors != null && Model.Instructors.Any())
+            {
+                @foreach (var item in Model.Instructors)
+                {
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                @if (!string.IsNullOrEmpty(item.PhotoUrl))
+                                {
+                                    <img class="img-fluid" src="@item.PhotoUrl" alt="@item.Name">
+                                }
+                                else
+                                {
+                                    <img class="img-fluid" src="~/assets/img/default-photo.jpg" alt="No photo available">
+                                }
+                            </div>
+                            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square btn-primary mx-1" href="@item.SocialMedia1"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square btn-primary mx-1" href="@item.SocialMedia2"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square btn-primary mx-1" href="@item.SocialMedia3"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0">@item.Name</h5>
+                                <small>@item.Expertise</small>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="~/assets/img/team-2.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="~/assets/img/team-3.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="~/assets/img/team-4.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
+                }
+            }
+            else
+            {
+                <p>No instructors available.</p>
+            }
         </div>
     </div>
 </div>

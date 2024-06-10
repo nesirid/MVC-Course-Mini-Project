@@ -8,5 +8,6 @@ namespace CourseManagement.Models
         public string Name { get; set; }
         [Required]
         public string Icon { get; set; }
+        public ICollection<InstructorSocialMedia> InstructorSocialMedias { get; set; }
     }
 }

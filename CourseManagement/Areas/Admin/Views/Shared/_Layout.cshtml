@@ -214,13 +214,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Instructors" asp-action="Index">
+                        <a class="nav-link" asp-area="Admin" asp-controller="Instructor" asp-action="Index">
                             <i class="mdi mdi-grid-large menu-icon"></i>
                             <span class="menu-title">Instructors</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="SocialMedias" asp-action="Index">
+                        <a class="nav-link" asp-controller="SocialMedia" asp-action="Index">
                             <i class="mdi mdi-emoticon menu-icon"></i>
                             <span class="menu-title">SocialMedias</span>
                         </a>
@@ -276,6 +276,7 @@
         <script src="~/admin/js/dataTables.bootstrap4.js"></script>
     }
     @RenderSection("js", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>
