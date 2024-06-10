@@ -1,0 +1,61 @@
+﻿@model CourseManagement.ViewModels.InstructorVM
+
+@{
+    ViewData["Title"] = "Create Instructor";
+}
+
+    <section>
+        <div class="mt-5">
+            <h1>Create Instructor</h1>
+
+        </div>
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PhotoFile" class="control-label"></label>
+                            <input asp-for="PhotoFile" type="file" class="form-control" />
+                            <span asp-validation-for="PhotoFile" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SocialMedia1" class="control-label"></label>
+                            <input asp-for="SocialMedia1" class="form-control" />
+                            <span asp-validation-for="SocialMedia1" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SocialMedia2" class="control-label"></label>
+                            <input asp-for="SocialMedia2" class="form-control" />
+                            <span asp-validation-for="SocialMedia2" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="SocialMedia3" class="control-label"></label>
+                            <input asp-for="SocialMedia3" class="form-control" />
+                            <span asp-validation-for="SocialMedia3" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Expertise" class="control-label"></label>
+                            <input asp-for="Expertise" class="form-control" />
+                            <span asp-validation-for="Expertise" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+

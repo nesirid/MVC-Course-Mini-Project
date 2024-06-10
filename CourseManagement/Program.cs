@@ -32,8 +32,9 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddScoped<IInstructorService, InstructorService>();
 
-
+builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor(); 
 
 var app = builder.Build();

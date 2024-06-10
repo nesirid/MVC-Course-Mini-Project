@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace CourseManagement.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
     public class CourseController : Controller
     {
         private readonly ICourseService _courseService;

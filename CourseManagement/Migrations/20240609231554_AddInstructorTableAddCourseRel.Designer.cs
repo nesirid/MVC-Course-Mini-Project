@@ -4,6 +4,7 @@ using CourseManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CourseManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240609231554_AddInstructorTableAddCourseRel")]
+    partial class AddInstructorTableAddCourseRel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -164,26 +166,17 @@ namespace CourseManagement.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Expertise")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhotoUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia3")
+                    b.Property<string>("ProfilePictureUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

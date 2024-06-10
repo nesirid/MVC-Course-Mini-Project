@@ -11,5 +11,9 @@ namespace CourseManagement.ViewModels
         public int CategoryId { get; set; }
         public IFormFile ImageFile { get; set; }
         public string? ImageUrl { get; set; }
+        public int Duration { get; set; } 
+        public int Rating { get; set; }
+        public int TeacherId { get; set; } 
+        public int StudentCount { get; set; }
     }
 }

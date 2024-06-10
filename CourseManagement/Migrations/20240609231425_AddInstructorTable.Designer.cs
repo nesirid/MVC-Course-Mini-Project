@@ -4,6 +4,7 @@ using CourseManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CourseManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240609231425_AddInstructorTable")]
+    partial class AddInstructorTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,9 +139,6 @@ namespace CourseManagement.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("InstructorId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -150,8 +149,6 @@ namespace CourseManagement.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("InstructorId");
 
                     b.ToTable("Courses");
                 });
@@ -164,26 +161,17 @@ namespace CourseManagement.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Expertise")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhotoUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialMedia3")
+                    b.Property<string>("ProfilePictureUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -356,10 +344,6 @@ namespace CourseManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CourseManagement.Models.Instructor", null)
-                        .WithMany("Courses")
-                        .HasForeignKey("InstructorId");
-
                     b.Navigation("Category");
                 });
 
@@ -415,11 +399,6 @@ namespace CourseManagement.Migrations
                 });
 
             modelBuilder.Entity("CourseManagement.Models.Category", b =>
-                {
-                    b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("CourseManagement.Models.Instructor", b =>
                 {
                     b.Navigation("Courses");
                 });
