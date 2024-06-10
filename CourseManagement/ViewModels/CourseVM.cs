@@ -13,7 +13,8 @@ namespace CourseManagement.ViewModels
         public string? ImageUrl { get; set; }
         public int Duration { get; set; } 
         public int Rating { get; set; }
-        public int TeacherId { get; set; } 
+        [Required(ErrorMessage = "Instructor is required.")]
+        public int InstructorId { get; set; }
         public int StudentCount { get; set; }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Threading.Tasks;
 using CourseManagement.Models;
 using CourseManagement.Services.Interfaces;
 using CourseManagement.ViewModels;

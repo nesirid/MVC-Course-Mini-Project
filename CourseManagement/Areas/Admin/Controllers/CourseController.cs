@@ -1,9 +1,11 @@
 ﻿using CourseManagement.Models;
 using CourseManagement.Services.Interfaces;
 using CourseManagement.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CourseManagement.Areas.Admin.Controllers
 {
@@ -12,11 +14,15 @@ namespace CourseManagement.Areas.Admin.Controllers
     {
         private readonly ICourseService _courseService;
         private readonly ICategoryService _categoryService;
+        private readonly IInstructorService _instructorService;
 
-        public CourseController(ICourseService courseService, ICategoryService categoryService)
+        public CourseController(ICourseService courseService,
+                                ICategoryService categoryService,
+                                IInstructorService instructorService)
         {
             _courseService = courseService;
             _categoryService = categoryService;
+            _instructorService = instructorService;
         }
 
         public async Task<IActionResult> Index()
@@ -28,6 +34,7 @@ namespace CourseManagement.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             ViewData["Categories"] = new SelectList(await _categoryService.GetAllCategoriesAsync(), "Id", "Name");
+            ViewData["Instructors"] = new SelectList(await _instructorService.GetAllAsync(), "Id", "Name");
             return View();
         }
 
@@ -44,6 +51,7 @@ namespace CourseManagement.Areas.Admin.Controllers
                 }
 
                 ViewData["Categories"] = new SelectList(await _categoryService.GetAllCategoriesAsync(), "Id", "Name", courseVM.CategoryId);
+                ViewData["Instructors"] = new SelectList(await _instructorService.GetAllAsync(), "Id", "Name", courseVM.InstructorId);
                 return View(courseVM);
             }
 
@@ -68,6 +76,10 @@ namespace CourseManagement.Areas.Admin.Controllers
                 Description = courseVM.Description,
                 Price = courseVM.Price,
                 CategoryId = courseVM.CategoryId,
+                Duration = courseVM.Duration,
+                Rating = courseVM.Rating,
+                InstructorId = courseVM.InstructorId,
+                StudentCount = courseVM.StudentCount,
                 ImageUrl = imageUrl
             };
 
@@ -90,10 +102,15 @@ namespace CourseManagement.Areas.Admin.Controllers
                 Description = course.Description,
                 Price = course.Price,
                 CategoryId = course.CategoryId,
+                Duration = course.Duration,
+                Rating = course.Rating,
+                InstructorId = course.InstructorId,
+                StudentCount = course.StudentCount,
                 ImageUrl = course.ImageUrl
             };
 
             ViewData["Categories"] = new SelectList(await _categoryService.GetAllCategoriesAsync(), "Id", "Name", courseVM.CategoryId);
+            ViewData["Instructors"] = new SelectList(await _instructorService.GetAllAsync(), "Id", "Name", courseVM.InstructorId);
             return View(courseVM);
         }
 
@@ -109,6 +126,7 @@ namespace CourseManagement.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 ViewData["Categories"] = new SelectList(await _categoryService.GetAllCategoriesAsync(), "Id", "Name", courseVM.CategoryId);
+                ViewData["Instructors"] = new SelectList(await _instructorService.GetAllAsync(), "Id", "Name", courseVM.InstructorId);
                 return View(courseVM);
             }
 
@@ -135,10 +153,15 @@ namespace CourseManagement.Areas.Admin.Controllers
             course.Description = courseVM.Description;
             course.Price = courseVM.Price;
             course.CategoryId = courseVM.CategoryId;
+            course.Duration = courseVM.Duration;
+            course.Rating = courseVM.Rating;
+            course.InstructorId = courseVM.InstructorId;
+            course.StudentCount = courseVM.StudentCount;
 
             await _courseService.UpdateCourseAsync(course);
             return RedirectToAction(nameof(Index));
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)

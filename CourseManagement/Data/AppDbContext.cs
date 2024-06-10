@@ -12,12 +12,27 @@ namespace CourseManagement.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<InstructorSocialMedia> InstructorSocialMedias { get; set; }
         public DbSet<Setting> Settings { get; set; }    
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<Course>()
+               .Property(e => e.Price)
+               .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<InstructorSocialMedia>()
+               .HasKey(ism => new { ism.InstructorId, ism.SocialMediaId });
+
+            modelBuilder.Entity<InstructorSocialMedia>()
+                .HasOne(ism => ism.SocialMedia)
+                .WithMany()
+                .HasForeignKey(ism => ism.SocialMediaId);
 
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.Courses)

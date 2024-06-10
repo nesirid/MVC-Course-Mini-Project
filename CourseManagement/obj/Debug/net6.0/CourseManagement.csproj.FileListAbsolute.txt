@@ -506,8 +506,8 @@ C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseMa
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.csproj.CopyComplete
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.genruntimeconfig.cache
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\ref\CourseManagement.dll
-C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\appsettings.json
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\appsettings.json
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\CourseManagement.staticwebassets.runtime.json
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\CourseManagement.exe
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\CourseManagement.deps.json
@@ -555,9 +555,11 @@ C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseMa
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\NuGet.Common.dll
@@ -759,5 +761,3 @@ C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseMa
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.pdb
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\CourseManagement.genruntimeconfig.cache
 C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\obj\Debug\net6.0\ref\CourseManagement.dll
-C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\dotnet-aspnet-codegenerator-design.dll
-C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll

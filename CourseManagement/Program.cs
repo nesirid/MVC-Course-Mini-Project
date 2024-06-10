@@ -33,6 +33,7 @@ builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IInstructorService, InstructorService>();
+builder.Services.AddScoped<ISocialMediaService, SocialMediaService>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor(); 

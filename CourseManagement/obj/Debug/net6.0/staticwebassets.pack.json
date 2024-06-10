@@ -481,6 +481,14 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\icons\\75ec18a5bf959aab895830be3a78cb34.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\75ec18a5bf959aab895830be3a78cb34.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\icons\\Screenshot_5.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\Screenshot_5.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg"
     },
@@ -531,6 +539,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\course-3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\course-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\course12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\course12.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\team-1.jpg",

@@ -5,9 +5,8 @@
 }
 
 <section>
-    <div class="mt-5">
+    <div class="mt-5 col">
         <h1>Categories</h1>
-
         @if (User.IsInRole("SuperAdmin"))
         {
             <p>
@@ -15,8 +14,8 @@
             </p>
         }
     </div>
-    <div class="mt-5">
-        <table class="table">
+    <div class="mt-5 col">
+        <table class="table mt-5 col">
             <thead>
                 <tr>
                     <th>Name</th>

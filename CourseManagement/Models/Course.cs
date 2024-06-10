@@ -14,6 +14,15 @@ namespace CourseManagement.Models
         [Required]
         public int CategoryId { get; set; }
         public string? ImageUrl { get; set; }
+        [Required]
+        public int Duration { get; set; }
+        [Required]
+        public int Rating { get; set; }
+        [Required]
+        public int InstructorId { get; set; }
+        public int StudentCount { get; set; }
         public Category Category { get; set; }
+        public Instructor Instructor { get; set; }
+
     }
 }

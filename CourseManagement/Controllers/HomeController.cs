@@ -15,7 +15,6 @@ namespace CourseManagement.Controllers
             _courseService = courseService;
             _categoryService = categoryService;
         }
-
         public async Task<IActionResult> Index()
         {
             var viewModel = new HomeVM
@@ -23,7 +22,6 @@ namespace CourseManagement.Controllers
                 Categories = await _categoryService.GetAllCategoriesAsync(),
                 Courses = await _courseService.GetAllCoursesAsync()
             };
-
             return View(viewModel);
         }
     }
