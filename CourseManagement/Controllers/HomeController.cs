@@ -1,8 +1,6 @@
 ﻿using CourseManagement.Services.Interfaces;
 using CourseManagement.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CourseManagement.Controllers
 {
@@ -11,14 +9,17 @@ namespace CourseManagement.Controllers
         private readonly ICourseService _courseService;
         private readonly ICategoryService _categoryService;
         private readonly IInstructorService _instructorService;
+        private readonly ISliderService _sliderService;
 
         public HomeController(ICourseService courseService,
                               ICategoryService categoryService,
-                              IInstructorService instructorService)
+                              IInstructorService instructorService,
+                              ISliderService sliderService)
         {
             _courseService = courseService;
             _categoryService = categoryService;
             _instructorService = instructorService;
+            _sliderService = sliderService;
         }
 
         public async Task<IActionResult> Index()
@@ -39,7 +40,8 @@ namespace CourseManagement.Controllers
             {
                 Categories = await _categoryService.GetAllCategoriesAsync(),
                 Courses = await _courseService.GetAllCoursesAsync(),
-                Instructors = instructorVMs
+                Instructors = instructorVMs,
+                Sliders = await _sliderService.GetAllAsync()
             };
 
             return View(viewModel);
