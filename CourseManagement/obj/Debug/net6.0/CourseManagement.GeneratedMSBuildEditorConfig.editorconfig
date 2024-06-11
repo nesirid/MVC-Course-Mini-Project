@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\For Programing Education\BACKEND\CourseManagement\CourseManagement\CourseManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/About/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/About/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +72,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Instructor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/ServiceItem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUl0ZW1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/ServiceItem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUl0ZW1cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/ServiceItem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZUl0ZW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Desktop/For Programing Education/BACKEND/CourseManagement/CourseManagement/CourseManagement/Areas/Admin/Views/Shared/_Layout.cshtml]

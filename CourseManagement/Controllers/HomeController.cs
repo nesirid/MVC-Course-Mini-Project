@@ -10,16 +10,23 @@ namespace CourseManagement.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IInstructorService _instructorService;
         private readonly ISliderService _sliderService;
+        private readonly IServiceItemService _serviceItemService;
+        private readonly IAboutService _aboutService;
+
 
         public HomeController(ICourseService courseService,
                               ICategoryService categoryService,
                               IInstructorService instructorService,
-                              ISliderService sliderService)
+                              ISliderService sliderService,
+                              IServiceItemService serviceItemService,
+                              IAboutService aboutService)
         {
             _courseService = courseService;
             _categoryService = categoryService;
             _instructorService = instructorService;
             _sliderService = sliderService;
+            _serviceItemService = serviceItemService;
+            _aboutService = aboutService;
         }
 
         public async Task<IActionResult> Index()
@@ -41,7 +48,11 @@ namespace CourseManagement.Controllers
                 Categories = await _categoryService.GetAllCategoriesAsync(),
                 Courses = await _courseService.GetAllCoursesAsync(),
                 Instructors = instructorVMs,
-                Sliders = await _sliderService.GetAllAsync()
+                Sliders = await _sliderService.GetAllAsync(),
+                ServiceItems = await _serviceItemService.GetAllAsync(),
+                Abouts = await _aboutService.GetAllAsync()
+
+
             };
 
             return View(viewModel);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QbZN+7HupL3xsehS7urH03yiiM6zVONUsUzUBNnF9Y0=",
+  "Hash": "cKYc4K4tu0osr38NnGw2+lxTFAaO0mIkND4Pj6baqOs=",
   "Source": "CourseManagement",
   "BasePath": "_content/CourseManagement",
   "Mode": "Default",
@@ -2352,6 +2352,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\icons\\Screenshot_5.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\10449303-ecf8-4e20-bfcc-0f0ee12ad424_about.jpg",
+      "SourceId": "CourseManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\",
+      "BasePath": "_content/CourseManagement",
+      "RelativePath": "assets/img/10449303-ecf8-4e20-bfcc-0f0ee12ad424_about.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\10449303-ecf8-4e20-bfcc-0f0ee12ad424_about.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\img\\360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg",

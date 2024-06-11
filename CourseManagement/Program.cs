@@ -35,7 +35,8 @@ builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<IInstructorService, InstructorService>();
 builder.Services.AddScoped<ISocialMediaService, SocialMediaService>();
 builder.Services.AddScoped<ISliderService, SliderService>();
-
+builder.Services.AddScoped<IServiceItemService, ServiceItemService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor(); 

@@ -1,0 +1,45 @@
+﻿@model CourseManagement.ViewModels.AboutVM
+
+@{
+    ViewData["Title"] = "Edit About";
+}
+
+<section>
+    <div class="mt-5">
+        <h1>Edit About</h1>
+        <div>
+            <a class="btn btn-primary" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+    <div class="mt-5">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label">Image</label>
+                <input asp-for="ImageFile" type="file" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Model.ImageUrl" alt="Image" style="width: 50px; height: 50px;" />
+                }
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

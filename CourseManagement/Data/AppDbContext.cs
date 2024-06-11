@@ -15,6 +15,8 @@ namespace CourseManagement.Data
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<InstructorSocialMedia> InstructorSocialMedias { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<ServiceItem> ServiceItems { get; set; }
+        public DbSet<About> Abouts { get; set; }
         public DbSet<Setting> Settings { get; set; }    
 
 
