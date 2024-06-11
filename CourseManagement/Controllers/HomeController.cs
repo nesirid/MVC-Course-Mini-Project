@@ -12,6 +12,7 @@ namespace CourseManagement.Controllers
         private readonly ISliderService _sliderService;
         private readonly IServiceItemService _serviceItemService;
         private readonly IAboutService _aboutService;
+        private readonly ITestimonialService _testimonialService;
 
 
         public HomeController(ICourseService courseService,
@@ -19,7 +20,8 @@ namespace CourseManagement.Controllers
                               IInstructorService instructorService,
                               ISliderService sliderService,
                               IServiceItemService serviceItemService,
-                              IAboutService aboutService)
+                              IAboutService aboutService,
+                              ITestimonialService testimonialService)
         {
             _courseService = courseService;
             _categoryService = categoryService;
@@ -27,6 +29,7 @@ namespace CourseManagement.Controllers
             _sliderService = sliderService;
             _serviceItemService = serviceItemService;
             _aboutService = aboutService;
+            _testimonialService = testimonialService;
         }
 
         public async Task<IActionResult> Index()
@@ -50,7 +53,8 @@ namespace CourseManagement.Controllers
                 Instructors = instructorVMs,
                 Sliders = await _sliderService.GetAllAsync(),
                 ServiceItems = await _serviceItemService.GetAllAsync(),
-                Abouts = await _aboutService.GetAllAsync()
+                Abouts = await _aboutService.GetAllAsync(),
+                Testimonials = await _testimonialService.GetAllAsync(),
 
 
             };

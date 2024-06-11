@@ -17,6 +17,7 @@ namespace CourseManagement.Data
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Setting> Settings { get; set; }    
 
 

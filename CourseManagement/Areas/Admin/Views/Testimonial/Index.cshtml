@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CourseManagement.Models.Testimonial>
+
+    @{
+    ViewData["Title"] = "Testimonials";
+    }
+
+    <section>
+        <div class="mt-5">
+            <h1>Manage Testimonials</h1>
+            <p>
+                <a asp-action="Create" class="btn btn-primary">Create New</a>
+            </p>
+        </div>
+        <div class="mt-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Profession</th>
+                        <th>Text</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ClientName</td>
+                        <td>@item.Profession</td>
+                        <td>@item.Text</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImageUrl))
+                            {
+                            <img src="@item.ImageUrl" alt="@item.ClientName" style="width: 80px; height: 80px;" />
+                            }
+                            else
+                            {
+                            <span>No image available</span>
+                            }
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>

@@ -10,6 +10,6 @@ namespace CourseManagement.ViewModels
         public IEnumerable<Slider> Sliders { get; set; }
         public IEnumerable<ServiceItem> ServiceItems { get; set; }
         public IEnumerable<About> Abouts { get; set; }
-
+        public IEnumerable<Testimonial> Testimonials { get; internal set; }
     }
 }
