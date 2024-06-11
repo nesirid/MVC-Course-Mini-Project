@@ -11,5 +11,6 @@ namespace CourseManagement.ViewModels
         public IEnumerable<ServiceItem> ServiceItems { get; set; }
         public IEnumerable<About> Abouts { get; set; }
         public IEnumerable<Testimonial> Testimonials { get; internal set; }
+        public IEnumerable<SocialMedia> SocialMedias { get; internal set; }
     }
 }

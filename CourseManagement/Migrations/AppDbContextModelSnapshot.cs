@@ -238,9 +238,6 @@ namespace CourseManagement.Migrations
                     b.Property<int>("SocialMediaId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SocialMediaId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -248,8 +245,6 @@ namespace CourseManagement.Migrations
                     b.HasKey("InstructorId", "SocialMediaId");
 
                     b.HasIndex("SocialMediaId");
-
-                    b.HasIndex("SocialMediaId1");
 
                     b.ToTable("InstructorSocialMedias");
                 });
@@ -350,6 +345,10 @@ namespace CourseManagement.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -555,10 +554,6 @@ namespace CourseManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CourseManagement.Models.SocialMedia", null)
-                        .WithMany("InstructorSocialMedias")
-                        .HasForeignKey("SocialMediaId1");
-
                     b.Navigation("Instructor");
 
                     b.Navigation("SocialMedia");
@@ -623,11 +618,6 @@ namespace CourseManagement.Migrations
             modelBuilder.Entity("CourseManagement.Models.Instructor", b =>
                 {
                     b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("CourseManagement.Models.SocialMedia", b =>
-                {
-                    b.Navigation("InstructorSocialMedias");
                 });
 #pragma warning restore 612, 618
         }

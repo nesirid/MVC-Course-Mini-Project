@@ -2,6 +2,7 @@
 using CourseManagement.Services.Interfaces;
 using CourseManagement.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CourseManagement.Areas.Admin.Controllers
 {
@@ -22,7 +23,8 @@ namespace CourseManagement.Areas.Admin.Controllers
             {
                 Id = sm.Id,
                 Name = sm.Name,
-                IconUrl = sm.Icon
+                IconUrl = sm.Icon,
+                Url = sm.Url
             }).ToList();
             return View(socialMediaVMs);
         }
@@ -57,7 +59,8 @@ namespace CourseManagement.Areas.Admin.Controllers
                 var socialMedia = new SocialMedia
                 {
                     Name = socialMediaVM.Name,
-                    Icon = iconUrl
+                    Icon = iconUrl,
+                    Url = socialMediaVM.Url
                 };
 
                 await _socialMediaService.AddAsync(socialMedia);
@@ -80,7 +83,8 @@ namespace CourseManagement.Areas.Admin.Controllers
             {
                 Id = socialMedia.Id,
                 Name = socialMedia.Name,
-                IconUrl = socialMedia.Icon
+                IconUrl = socialMedia.Icon,
+                Url = socialMedia.Url
             };
 
             ViewData["Action"] = "Edit";
@@ -105,6 +109,7 @@ namespace CourseManagement.Areas.Admin.Controllers
                 }
 
                 socialMedia.Name = socialMediaVM.Name;
+                socialMedia.Url = socialMediaVM.Url;
 
                 if (socialMediaVM.IconFile != null)
                 {

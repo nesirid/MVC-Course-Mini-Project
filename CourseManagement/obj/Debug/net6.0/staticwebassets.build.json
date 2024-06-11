@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cKYc4K4tu0osr38NnGw2+lxTFAaO0mIkND4Pj6baqOs=",
+  "Hash": "cYoVLYSKMUg/B8bRS0K++lQvE3cvV/L25ZjBPPXvSB4=",
   "Source": "CourseManagement",
   "BasePath": "_content/CourseManagement",
   "Mode": "Default",
@@ -2333,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\icons\\75ec18a5bf959aab895830be3a78cb34.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\icons\\down_arrow.png",
+      "SourceId": "CourseManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\",
+      "BasePath": "_content/CourseManagement",
+      "RelativePath": "assets/icons/down_arrow.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\icons\\down_arrow.png"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\For Programing Education\\BACKEND\\CourseManagement\\CourseManagement\\CourseManagement\\wwwroot\\assets\\icons\\Screenshot_5.png",

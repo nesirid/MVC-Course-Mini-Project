@@ -1,24 +1,24 @@
 ﻿@model IEnumerable<CourseManagement.ViewModels.SocialMediaVM>
 
 @{
-    ViewData["Title"] = "Social Media Links";
+    ViewData["Title"] = "Manage Social Media";
 }
 
 <section>
     <div class="mt-5">
-        <h1>Social Media Links</h1>
+        <h1>Manage Social Media</h1>
         <p>
             <a asp-action="Create" class="btn btn-primary">Create New</a>
         </p>
     </div>
-
     <div class="mt-5">
         <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Icon</th>
-                    <th></th>
+                    <th>Url</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,10 +36,10 @@
                                 <span>No icon available</span>
                             }
                         </td>
+                        <td>@item.Url</td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a> |
-                            <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;">
-                                @Html.AntiForgeryToken()
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline">
                                 <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                             </form>
                         </td>

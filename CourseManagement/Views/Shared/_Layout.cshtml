@@ -1,4 +1,5 @@
 ﻿@inject UserManager<AppUser> UserManager
+@model CourseManagement.ViewModels.HomeVM
 
 <!DOCTYPE html>
 <html lang="en">
@@ -123,10 +124,17 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        @if (Model.SocialMedias != null && Model.SocialMedias.Any())
+                        {
+                            <div class="social-media-links d-flex justify-content-center">
+                                @foreach (var socialMedia in Model.SocialMedias)
+                                {
+                                    <a class="btn btn-outline-light btn-social mx-2" href="@socialMedia.Url">
+                                        <img src="@socialMedia.Icon" alt="@socialMedia.Name" class="social-icon">
+                                    </a>
+                                }
+                            </div>
+                        }
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
